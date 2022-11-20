@@ -1,0 +1,11 @@
+C:\Users\erik_\source\repos\uprofe\bin\Debug\uprofe.exe.config
+C:\Users\erik_\source\repos\uprofe\bin\Debug\uprofe.exe
+C:\Users\erik_\source\repos\uprofe\bin\Debug\uprofe.pdb
+C:\Users\erik_\source\repos\uprofe\obj\Debug\uprofe.csproj.AssemblyReference.cache
+C:\Users\erik_\source\repos\uprofe\obj\Debug\uprofe.csproj.SuggestedBindingRedirects.cache
+C:\Users\erik_\source\repos\uprofe\obj\Debug\uprofe.Login.resources
+C:\Users\erik_\source\repos\uprofe\obj\Debug\uprofe.Properties.Resources.resources
+C:\Users\erik_\source\repos\uprofe\obj\Debug\uprofe.csproj.GenerateResource.cache
+C:\Users\erik_\source\repos\uprofe\obj\Debug\uprofe.csproj.CoreCompileInputs.cache
+C:\Users\erik_\source\repos\uprofe\obj\Debug\uprofe.exe
+C:\Users\erik_\source\repos\uprofe\obj\Debug\uprofe.pdb
