@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.profesor_asignado = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.mes = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.cantidad_horas = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.valor_hora = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nombre_asignatura = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.guardar_asignatura = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox6
+            // profesor_asignado
             // 
-            this.textBox6.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBox6.Location = new System.Drawing.Point(245, 220);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 28;
+            this.profesor_asignado.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.profesor_asignado.Location = new System.Drawing.Point(245, 220);
+            this.profesor_asignado.Name = "profesor_asignado";
+            this.profesor_asignado.Size = new System.Drawing.Size(100, 20);
+            this.profesor_asignado.TabIndex = 28;
             // 
             // label6
             // 
@@ -60,13 +60,13 @@
             this.label6.TabIndex = 27;
             this.label6.Text = "Profesor asignado";
             // 
-            // textBox4
+            // mes
             // 
-            this.textBox4.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBox4.Location = new System.Drawing.Point(245, 168);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 24;
+            this.mes.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.mes.Location = new System.Drawing.Point(245, 168);
+            this.mes.Name = "mes";
+            this.mes.Size = new System.Drawing.Size(100, 20);
+            this.mes.TabIndex = 24;
             // 
             // label4
             // 
@@ -88,14 +88,15 @@
             this.button3.TabIndex = 22;
             this.button3.Text = "Atras";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox3
+            // cantidad_horas
             // 
-            this.textBox3.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBox3.Location = new System.Drawing.Point(245, 78);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 21;
+            this.cantidad_horas.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.cantidad_horas.Location = new System.Drawing.Point(245, 78);
+            this.cantidad_horas.Name = "cantidad_horas";
+            this.cantidad_horas.Size = new System.Drawing.Size(100, 20);
+            this.cantidad_horas.TabIndex = 21;
             // 
             // label3
             // 
@@ -107,13 +108,13 @@
             this.label3.TabIndex = 20;
             this.label3.Text = "Cantidad de horas";
             // 
-            // textBox2
+            // valor_hora
             // 
-            this.textBox2.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBox2.Location = new System.Drawing.Point(245, 119);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 19;
+            this.valor_hora.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.valor_hora.Location = new System.Drawing.Point(245, 119);
+            this.valor_hora.Name = "valor_hora";
+            this.valor_hora.Size = new System.Drawing.Size(100, 20);
+            this.valor_hora.TabIndex = 19;
             // 
             // label2
             // 
@@ -125,13 +126,13 @@
             this.label2.TabIndex = 18;
             this.label2.Text = "Valor / hora";
             // 
-            // textBox1
+            // nombre_asignatura
             // 
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Menu;
-            this.textBox1.Location = new System.Drawing.Point(248, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 17;
+            this.nombre_asignatura.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.nombre_asignatura.Location = new System.Drawing.Point(248, 35);
+            this.nombre_asignatura.Name = "nombre_asignatura";
+            this.nombre_asignatura.Size = new System.Drawing.Size(100, 20);
+            this.nombre_asignatura.TabIndex = 17;
             // 
             // label1
             // 
@@ -143,33 +144,34 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Nombre asignatura";
             // 
-            // button1
+            // guardar_asignatura
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(47, 280);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 33);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.guardar_asignatura.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.guardar_asignatura.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guardar_asignatura.Location = new System.Drawing.Point(47, 280);
+            this.guardar_asignatura.Name = "guardar_asignatura";
+            this.guardar_asignatura.Size = new System.Drawing.Size(97, 33);
+            this.guardar_asignatura.TabIndex = 29;
+            this.guardar_asignatura.Text = "Guardar";
+            this.guardar_asignatura.UseVisualStyleBackColor = false;
+            this.guardar_asignatura.Click += new System.EventHandler(this.guardar_asignatura_Click);
             // 
             // Registro_Asignatura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(791, 380);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.guardar_asignatura);
+            this.Controls.Add(this.profesor_asignado);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.mes);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.cantidad_horas);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.valor_hora);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.nombre_asignatura);
             this.Controls.Add(this.label1);
             this.Name = "Registro_Asignatura";
             this.Text = "Registro_Asignatura";
@@ -180,17 +182,17 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox profesor_asignado;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox mes;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox cantidad_horas;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox valor_hora;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox nombre_asignatura;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button guardar_asignatura;
     }
 }
