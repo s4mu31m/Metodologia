@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 18-11-2022 a las 23:49:44
--- Versión del servidor: 10.4.25-MariaDB
--- Versión de PHP: 8.1.10
+-- Host: 127.0.0.1
+-- Generation Time: Nov 25, 2022 at 11:48 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,25 +18,36 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `uprofe`
+-- Database: `uprofe`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `asignatura`
+-- Table structure for table `asignatura`
 --
 
 CREATE TABLE `asignatura` (
   `id_asignatura` int(11) NOT NULL,
-  `profe_asoc` varchar(20) DEFAULT NULL,
-  `nombre` varchar(30) DEFAULT NULL
+  `nombre_asignatura` varchar(20) NOT NULL,
+  `cantidad_horas` int(11) NOT NULL,
+  `valor_hora` int(11) NOT NULL,
+  `mes_impartido` varchar(45) NOT NULL,
+  `profesor_asignatura` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `asignatura`
+--
+
+INSERT INTO `asignatura` (`id_asignatura`, `nombre_asignatura`, `cantidad_horas`, `valor_hora`, `mes_impartido`, `profesor_asignatura`) VALUES
+(0, 'asdas', 121, 2500, 'mayo', 'ceasr'),
+(1, 'chupar verga', 132, 100, 'diciembre', 'cesar');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `clases_hrs`
+-- Table structure for table `clases_hrs`
 --
 
 CREATE TABLE `clases_hrs` (
@@ -50,7 +61,7 @@ CREATE TABLE `clases_hrs` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `exp_profe`
+-- Table structure for table `exp_profe`
 --
 
 CREATE TABLE `exp_profe` (
@@ -62,7 +73,7 @@ CREATE TABLE `exp_profe` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `profesor`
+-- Table structure for table `profesor`
 --
 
 CREATE TABLE `profesor` (
@@ -76,54 +87,51 @@ CREATE TABLE `profesor` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Table structure for table `usuarios`
 --
 
 CREATE TABLE `usuarios` (
   `id_usuario` int(11) NOT NULL,
-  `nombre` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `usuarios_sistema`
---
-
-CREATE TABLE `usuarios_sistema` (
-  `tipo_usuario` int(11) NOT NULL,
-  `usuario` varchar(30) NOT NULL,
-  `contraseña` varchar(30) NOT NULL
+  `usuario` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `tipo_usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Índices para tablas volcadas
+-- Dumping data for table `usuarios`
+--
+
+INSERT INTO `usuarios` (`id_usuario`, `usuario`, `password`, `tipo_usuario`) VALUES
+(1, 'admin', 'admin', 1);
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `asignatura`
+-- Indexes for table `asignatura`
 --
 ALTER TABLE `asignatura`
   ADD PRIMARY KEY (`id_asignatura`),
-  ADD KEY `profe_asoc_idx` (`profe_asoc`),
-  ADD KEY `nombre` (`nombre`);
+  ADD KEY `profe_asoc_idx` (`nombre_asignatura`),
+  ADD KEY `nombre` (`cantidad_horas`);
 
 --
--- Indices de la tabla `clases_hrs`
+-- Indexes for table `clases_hrs`
 --
 ALTER TABLE `clases_hrs`
   ADD PRIMARY KEY (`cant_hrs`),
   ADD KEY `index` (`asignatura`);
 
 --
--- Indices de la tabla `exp_profe`
+-- Indexes for table `exp_profe`
 --
 ALTER TABLE `exp_profe`
   ADD PRIMARY KEY (`titulo`),
   ADD KEY `index` (`experiencia`);
 
 --
--- Indices de la tabla `profesor`
+-- Indexes for table `profesor`
 --
 ALTER TABLE `profesor`
   ADD PRIMARY KEY (`id_profesor`),
@@ -131,45 +139,26 @@ ALTER TABLE `profesor`
   ADD KEY `id_profesor` (`id_profesor`,`usuario`);
 
 --
--- Indices de la tabla `usuarios`
+-- Indexes for table `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id_usuario`);
 
 --
--- Indices de la tabla `usuarios_sistema`
---
-ALTER TABLE `usuarios_sistema`
-  ADD PRIMARY KEY (`tipo_usuario`);
-
---
--- Restricciones para tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- Filtros para la tabla `asignatura`
+-- AUTO_INCREMENT for table `asignatura`
 --
 ALTER TABLE `asignatura`
-  ADD CONSTRAINT `nombree` FOREIGN KEY (`id_asignatura`) REFERENCES `clases_hrs` (`cant_hrs`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  MODIFY `id_asignatura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Filtros para la tabla `profesor`
---
-ALTER TABLE `profesor`
-  ADD CONSTRAINT `asignatura_profe` FOREIGN KEY (`id_profesor`) REFERENCES `asignatura` (`id_asignatura`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `experiencia_profe` FOREIGN KEY (`id_profesor`) REFERENCES `exp_profe` (`experiencia`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Filtros para la tabla `usuarios`
+-- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD CONSTRAINT `profe_asoc` FOREIGN KEY (`id_usuario`) REFERENCES `profesor` (`id_profesor`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Filtros para la tabla `usuarios_sistema`
---
-ALTER TABLE `usuarios_sistema`
-  ADD CONSTRAINT `tipo_user` FOREIGN KEY (`tipo_usuario`) REFERENCES `usuarios` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
