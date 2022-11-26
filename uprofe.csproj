@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="data_asignatura.cs" />
+    <Compile Include="data_profe.cs" />
     <Compile Include="data_user.cs" />
     <Compile Include="Ingreso.cs">
       <SubType>Form</SubType>
@@ -88,6 +89,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="prop_asignatura.cs" />
+    <Compile Include="prop_profesor.cs" />
     <Compile Include="prop_user.cs" />
     <Compile Include="Registro_Asignatura.cs">
       <SubType>Form</SubType>
@@ -117,6 +119,7 @@
     <EmbeddedResource Include="Registro_Asignatura.resx">
       <DependentUpon>Registro_Asignatura.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\data_profe.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

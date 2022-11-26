@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.profesor_asignado = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
             this.label6 = new System.Windows.Forms.Label();
             this.mes = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,16 +41,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guardar_asignatura = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbx_profes = new System.Windows.Forms.ComboBox();
+            this.dataprofeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataprofeBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // profesor_asignado
-            // 
-            this.profesor_asignado.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.profesor_asignado.Location = new System.Drawing.Point(245, 220);
-            this.profesor_asignado.Name = "profesor_asignado";
-            this.profesor_asignado.Size = new System.Drawing.Size(100, 20);
-            this.profesor_asignado.TabIndex = 28;
             // 
             // label6
             // 
@@ -130,6 +125,7 @@
             // 
             // nombre_asignatura
             // 
+            this.nombre_asignatura.BackColor = System.Drawing.SystemColors.Window;
             this.nombre_asignatura.ForeColor = System.Drawing.SystemColors.InfoText;
             this.nombre_asignatura.Location = new System.Drawing.Point(248, 35);
             this.nombre_asignatura.Name = "nombre_asignatura";
@@ -168,14 +164,26 @@
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
+            // cbx_profes
+            // 
+            this.cbx_profes.FormattingEnabled = true;
+            this.cbx_profes.Location = new System.Drawing.Point(245, 220);
+            this.cbx_profes.Name = "cbx_profes";
+            this.cbx_profes.Size = new System.Drawing.Size(100, 21);
+            this.cbx_profes.TabIndex = 31;
+            // 
+            // dataprofeBindingSource
+            // 
+            this.dataprofeBindingSource.DataSource = typeof(uprofe.data_profe);
+            // 
             // Registro_Asignatura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(791, 380);
+            this.Controls.Add(this.cbx_profes);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.guardar_asignatura);
-            this.Controls.Add(this.profesor_asignado);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.mes);
             this.Controls.Add(this.label4);
@@ -188,15 +196,15 @@
             this.Controls.Add(this.label1);
             this.Name = "Registro_Asignatura";
             this.Text = "Registro_Asignatura";
+            this.Load += new System.EventHandler(this.Registro_Asignatura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataprofeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox profesor_asignado;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox mes;
         private System.Windows.Forms.Label label4;
@@ -209,5 +217,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button guardar_asignatura;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cbx_profes;
+        private System.Windows.Forms.BindingSource dataprofeBindingSource;
     }
 }

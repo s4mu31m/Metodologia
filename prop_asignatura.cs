@@ -8,7 +8,7 @@
         public int valor_hora { get; set; }
         public string mes_impartido { get; set; }
         public string profesor_asignatura { get; set; }
-
+        public int valor_a_pagar { get; set; }
 
     }
 }

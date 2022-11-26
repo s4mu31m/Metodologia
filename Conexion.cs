@@ -1,6 +1,5 @@
-﻿using System.Data.SqlClient;
+﻿using MySql.Data.MySqlClient;
 using System;
-using MySql.Data.MySqlClient;
 
 namespace uprofe
 {
@@ -21,7 +20,7 @@ namespace uprofe
             this.Server = "localhost";
             this.Port = "3306";
             this.User = "root";
-            this.Password = "loky";
+            this.Password = "";
         }
 
         public MySqlConnection CrearConexion()

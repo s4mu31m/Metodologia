@@ -1,13 +1,6 @@
-﻿using Microsoft.Win32;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace uprofe
@@ -19,14 +12,27 @@ namespace uprofe
             InitializeComponent();
         }
 
+        int nCodigo_ar = 0;
+
+        private void Selecciona_item()
+        {
+            if (string.IsNullOrEmpty(Convert.ToString(dgv_reporte.CurrentRow.Cells["id_asignatura"].Value)))
+            {
+                MessageBox.Show("Selecciona un registro válido", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                this.nCodigo_ar = Convert.ToInt32(dgv_reporte.CurrentRow.Cells["id_asignatura"].Value);
+            }
+        }
+
         private void Formato_al()
         {
 
             dgv_reporte.Columns[0].Visible = false;
-            
-            dgv_reporte.Columns[1].Width = 250;
+            dgv_reporte.Columns[1].Width = 150;
             dgv_reporte.Columns[1].HeaderText = "ASIGNATURA";
-            dgv_reporte.Columns[2].Width = 200;
+            dgv_reporte.Columns[2].Width = 100;
             dgv_reporte.Columns[2].HeaderText = "HORAS ASIGNATURA";
             dgv_reporte.Columns[3].Width = 100;
             dgv_reporte.Columns[3].HeaderText = "VALOR HORA";
@@ -34,6 +40,8 @@ namespace uprofe
             dgv_reporte.Columns[4].HeaderText = "MES IMPARTIDO";
             dgv_reporte.Columns[5].Width = 150;
             dgv_reporte.Columns[5].HeaderText = "PROFESOR ASIGNADO";
+            dgv_reporte.Columns[6].Width = 150;
+            dgv_reporte.Columns[6].HeaderText = "TOTAL A PAGAR";
         }
 
 
@@ -50,7 +58,9 @@ namespace uprofe
             Visible = false;
         }
 
-        private void Ingreso_Load(object sender, EventArgs e)
+
+
+        private void Listar_asignaturas()
         {
             MySqlConnection conexionBD = Conexion.getInstancia().CrearConexion();
 
@@ -60,7 +70,7 @@ namespace uprofe
                 conexionBD.Open();
                 MySqlCommand comando = new MySqlCommand();
                 comando.Connection = conexionBD;
-                comando.CommandText = ("select * from asignatura;");
+                comando.CommandText = ("SELECT * FROM asignatura;");
 
                 MySqlDataAdapter adaptar = new MySqlDataAdapter();
                 adaptar.SelectCommand = comando;
@@ -79,6 +89,44 @@ namespace uprofe
             conexionBD.Close();
         }
 
-    
+
+        private void ingresoProfe_Click(object sender, EventArgs e)
+        {
+            Ingreso_docente form = new Ingreso_docente();
+            form.Visible = true;
+            Visible = false;
+        }
+
+        private void eliminarRegistro_Click(object sender, EventArgs e)
+        {
+
+            string Rpta = "";
+            data_asignatura Datos = new data_asignatura();
+            Rpta = Datos.Eliminar_ar(nCodigo_ar);
+
+            if (Rpta.Equals("OK"))
+            {
+
+                nCodigo_ar = 0;
+                MessageBox.Show("Registro eliminado correctamente", "Aviso del Sistema", MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                MessageBox.Show("No tiene seleccionado ningún registro", "Aviso del Sistema", MessageBoxButtons.OK,
+                    MessageBoxIcon.Exclamation);
+            }
+            Listar_asignaturas();
+        }
+
+        private void dgv_reporte_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Selecciona_item();
+        }
+
+        private void Ingreso_Load(object sender, EventArgs e)
+        {
+            Listar_asignaturas();
+        }
     }
 }
