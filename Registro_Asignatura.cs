@@ -18,6 +18,7 @@ namespace uprofe
             cantidad_horas.Text = "";
             valor_hora.Text = "";
             mes.Text = "";
+            cbx_profes.Text = "";
 
         }
 

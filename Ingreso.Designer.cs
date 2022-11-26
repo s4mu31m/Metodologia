@@ -34,8 +34,11 @@
             this.salir = new System.Windows.Forms.Button();
             this.eliminarRegistro = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_Mes = new System.Windows.Forms.TextBox();
             this.buscar = new System.Windows.Forms.Button();
+            this.cbx_mes = new System.Windows.Forms.ComboBox();
+            this.cbx_profe = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.volver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_reporte)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,18 +96,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(633, 43);
+            this.label2.Location = new System.Drawing.Point(522, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 13);
+            this.label2.Size = new System.Drawing.Size(77, 13);
             this.label2.TabIndex = 12;
-            this.label2.Text = "INGRESA EL MES";
-            // 
-            // txt_Mes
-            // 
-            this.txt_Mes.Location = new System.Drawing.Point(750, 39);
-            this.txt_Mes.Name = "txt_Mes";
-            this.txt_Mes.Size = new System.Drawing.Size(94, 20);
-            this.txt_Mes.TabIndex = 13;
+            this.label2.Text = "Busca por mes";
             // 
             // buscar
             // 
@@ -114,14 +110,53 @@
             this.buscar.TabIndex = 14;
             this.buscar.Text = "Buscar";
             this.buscar.UseVisualStyleBackColor = true;
+            this.buscar.Click += new System.EventHandler(this.buscar_Click);
+            // 
+            // cbx_mes
+            // 
+            this.cbx_mes.FormattingEnabled = true;
+            this.cbx_mes.Location = new System.Drawing.Point(631, 27);
+            this.cbx_mes.Name = "cbx_mes";
+            this.cbx_mes.Size = new System.Drawing.Size(114, 21);
+            this.cbx_mes.TabIndex = 15;
+            // 
+            // cbx_profe
+            // 
+            this.cbx_profe.FormattingEnabled = true;
+            this.cbx_profe.Location = new System.Drawing.Point(631, 63);
+            this.cbx_profe.Name = "cbx_profe";
+            this.cbx_profe.Size = new System.Drawing.Size(114, 21);
+            this.cbx_profe.TabIndex = 17;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(522, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 13);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Busca por profesor";
+            // 
+            // volver
+            // 
+            this.volver.Location = new System.Drawing.Point(870, 25);
+            this.volver.Name = "volver";
+            this.volver.Size = new System.Drawing.Size(111, 22);
+            this.volver.TabIndex = 18;
+            this.volver.Text = "Volver";
+            this.volver.UseVisualStyleBackColor = true;
+            this.volver.Click += new System.EventHandler(this.volver_Click);
             // 
             // Ingreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1024, 415);
+            this.Controls.Add(this.volver);
+            this.Controls.Add(this.cbx_profe);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbx_mes);
             this.Controls.Add(this.buscar);
-            this.Controls.Add(this.txt_Mes);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.eliminarRegistro);
             this.Controls.Add(this.salir);
@@ -144,7 +179,10 @@
         private System.Windows.Forms.Button salir;
         private System.Windows.Forms.Button eliminarRegistro;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txt_Mes;
         private System.Windows.Forms.Button buscar;
+        private System.Windows.Forms.ComboBox cbx_mes;
+        private System.Windows.Forms.ComboBox cbx_profe;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button volver;
     }
 }

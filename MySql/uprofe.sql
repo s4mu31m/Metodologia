@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 25, 2022 at 11:48 PM
+-- Generation Time: Nov 26, 2022 at 08:23 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -33,16 +33,17 @@ CREATE TABLE `asignatura` (
   `cantidad_horas` int(11) NOT NULL,
   `valor_hora` int(11) NOT NULL,
   `mes_impartido` varchar(45) NOT NULL,
-  `profesor_asignatura` varchar(45) NOT NULL
+  `profesor_asignatura` varchar(45) NOT NULL,
+  `valor_a_pagar` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `asignatura`
 --
 
-INSERT INTO `asignatura` (`id_asignatura`, `nombre_asignatura`, `cantidad_horas`, `valor_hora`, `mes_impartido`, `profesor_asignatura`) VALUES
-(0, 'asdas', 121, 2500, 'mayo', 'ceasr'),
-(1, 'chupar verga', 132, 100, 'diciembre', 'cesar');
+INSERT INTO `asignatura` (`id_asignatura`, `nombre_asignatura`, `cantidad_horas`, `valor_hora`, `mes_impartido`, `profesor_asignatura`, `valor_a_pagar`) VALUES
+(10, 'prueba ', 5, 2500, 'agosto ', 'Cesar ', 12500),
+(11, 'ahora funcion ', 2500, 100, 'Diciembre ', 'Samuel ', 250000);
 
 -- --------------------------------------------------------
 
@@ -79,10 +80,20 @@ CREATE TABLE `exp_profe` (
 CREATE TABLE `profesor` (
   `id_profesor` int(11) NOT NULL,
   `nombre` varchar(20) DEFAULT NULL,
-  `usuario` varchar(15) DEFAULT NULL,
+  `rut` varchar(15) DEFAULT NULL,
   `fecha_nacimiento` date DEFAULT NULL,
-  `rut` varchar(12) DEFAULT NULL
+  `titulo` varchar(45) DEFAULT NULL,
+  `experiencia` varchar(45) DEFAULT NULL,
+  `asignatuas_impatidas` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `profesor`
+--
+
+INSERT INTO `profesor` (`id_profesor`, `nombre`, `rut`, `fecha_nacimiento`, `titulo`, `experiencia`, `asignatuas_impatidas`) VALUES
+(1, 'Samuel', '21.190.811-4', '0000-00-00', '04/12/2022', '5 años', NULL),
+(2, 'Cesar', '321654987', '0000-00-00', '32165', '45', NULL);
 
 -- --------------------------------------------------------
 
@@ -134,9 +145,7 @@ ALTER TABLE `exp_profe`
 -- Indexes for table `profesor`
 --
 ALTER TABLE `profesor`
-  ADD PRIMARY KEY (`id_profesor`),
-  ADD KEY `index` (`nombre`),
-  ADD KEY `id_profesor` (`id_profesor`,`usuario`);
+  ADD PRIMARY KEY (`id_profesor`);
 
 --
 -- Indexes for table `usuarios`
@@ -152,7 +161,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `asignatura`
 --
 ALTER TABLE `asignatura`
-  MODIFY `id_asignatura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_asignatura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `profesor`
+--
+ALTER TABLE `profesor`
+  MODIFY `id_profesor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `usuarios`

@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 using System.Data;
 
 
@@ -18,17 +19,16 @@ namespace uprofe
             try
             {
                 SqlCon = Conexion.getInstancia().CrearConexion();
-                
+
 
                 query =
-                    "INSERT INTO asignatura (`nombre_asignatura`, `cantidad_horas`, `valor_hora`, " +
-                    "`mes_impartido`, `profesor_asignatura', `valor_a_pagar`) VALUES ('" 
-                    + oAr.nombre_asignatura + "', '" 
-                    + oAr.cantidad_horas + "', '" 
-                    + oAr.valor_hora + "', '"
-                    + oAr.mes_impartido + "', '" 
-                    + oAr.profesor_asignatura + "', '" 
-                    + oAr.valor_a_pagar + "');";
+                    "INSERT INTO `uprofe`.`asignatura` (`nombre_asignatura`, `cantidad_horas`, `valor_hora`, `mes_impartido`, `profesor_asignatura`, `valor_a_pagar`)"
+                    + "VALUES('" + oAr.nombre_asignatura   +" ' , " +
+                            " '" + oAr.cantidad_horas      +" ' , " +
+                            " '" + oAr.valor_hora          +" ' , " +
+                            " '" + oAr.mes_impartido       +" ' , " +
+                            " '" + oAr.profesor_asignatura +" ' , " +
+                            " '" + oAr.valor_a_pagar       +" ' );";
 
                 MySqlCommand Comando = new MySqlCommand(query, SqlCon);
                 SqlCon.Open();

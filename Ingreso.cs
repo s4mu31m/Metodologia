@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace uprofe
@@ -12,7 +13,16 @@ namespace uprofe
             InitializeComponent();
         }
 
+        #region variable
+
         int nCodigo_ar = 0;
+
+        #endregion
+
+
+
+
+        #region Metodos
 
         private void Selecciona_item()
         {
@@ -25,7 +35,6 @@ namespace uprofe
                 this.nCodigo_ar = Convert.ToInt32(dgv_reporte.CurrentRow.Cells["id_asignatura"].Value);
             }
         }
-
         private void Formato_al()
         {
 
@@ -43,23 +52,6 @@ namespace uprofe
             dgv_reporte.Columns[6].Width = 150;
             dgv_reporte.Columns[6].HeaderText = "TOTAL A PAGAR";
         }
-
-
-
-        private void salir_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Registro_Asignatura form = new Registro_Asignatura();
-            form.Visible = true;
-            Visible = false;
-        }
-
-
-
         private void Listar_asignaturas()
         {
             MySqlConnection conexionBD = Conexion.getInstancia().CrearConexion();
@@ -87,6 +79,127 @@ namespace uprofe
             }
 
             conexionBD.Close();
+        }
+        private void Buscar_asignatura()
+        {
+            MySqlConnection conexionBD = Conexion.getInstancia().CrearConexion();
+
+            try
+            {
+                conexionBD.Open();
+                MySqlCommand comando = new MySqlCommand();
+                comando.Connection = conexionBD;
+                comando.CommandText = ("SELECT * FROM asignatura WHERE mes_impartido = '" + cbx_mes.Text + "';");
+
+                MySqlDataAdapter adaptar = new MySqlDataAdapter();
+                adaptar.SelectCommand = comando;
+                DataTable tabla = new DataTable();
+                adaptar.Fill(tabla);
+                dgv_reporte.DataSource = tabla;
+                this.Formato_al();
+
+
+
+            }
+            catch (Exception b)
+            {
+
+                MessageBox.Show(b.Message + b.StackTrace);
+            }
+
+            conexionBD.Close();
+        }
+        private void Buscar_profe()
+        {
+            MySqlConnection conexionBD = Conexion.getInstancia().CrearConexion();
+
+            try
+            {
+                conexionBD.Open();
+                MySqlCommand comando = new MySqlCommand();
+                comando.Connection = conexionBD;
+                comando.CommandText = ("SELECT * FROM asignatura WHERE profesor_asignatura = '" + cbx_profe.Text + "';");
+
+                MySqlDataAdapter adaptar = new MySqlDataAdapter();
+                adaptar.SelectCommand = comando;
+                DataTable tabla = new DataTable();
+                adaptar.Fill(tabla);
+                dgv_reporte.DataSource = tabla;
+                this.Formato_al();
+
+            }
+            catch (Exception b)
+            {
+
+                MessageBox.Show(b.Message + b.StackTrace);
+            }
+
+            conexionBD.Close();
+        }
+        private void CargarMes()
+        {
+            MySqlConnection conexionBD = Conexion.getInstancia().CrearConexion();
+
+
+            try
+            {
+                conexionBD.Open();
+                MySqlCommand comando = new MySqlCommand();
+                comando.Connection = conexionBD;
+                comando.CommandText = ("SELECT mes_impartido FROM asignatura;");
+                MySqlDataReader registro = comando.ExecuteReader();
+                while (registro.Read())
+                {
+                    cbx_mes.Items.Add(registro["mes_impartido"].ToString());
+                }
+            }
+            catch (Exception b)
+            {
+
+                MessageBox.Show(b.Message + b.StackTrace);
+            }
+
+            conexionBD.Close();
+        }
+
+        private void CargarProfe()
+        {
+            MySqlConnection conexionBD = Conexion.getInstancia().CrearConexion();
+
+
+            try
+            {
+                conexionBD.Open();
+                MySqlCommand comando = new MySqlCommand();
+                comando.Connection = conexionBD;
+                comando.CommandText = ("SELECT profesor_asignatura FROM uprofe.asignatura;");
+                MySqlDataReader registro = comando.ExecuteReader();
+                while (registro.Read())
+                {
+                    cbx_profe.Items.Add(registro["profesor_asignatura"].ToString());
+                }
+            }
+            catch (Exception b)
+            {
+
+                MessageBox.Show(b.Message + b.StackTrace);
+            }
+
+            conexionBD.Close();
+        }
+
+        #endregion
+
+        private void salir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Registro_Asignatura form = new Registro_Asignatura();
+            form.Visible = true;
+            Visible = false;
         }
 
 
@@ -125,6 +238,28 @@ namespace uprofe
         }
 
         private void Ingreso_Load(object sender, EventArgs e)
+        {
+            Listar_asignaturas();
+            CargarMes();
+            CargarProfe();
+        }
+
+        private void buscar_Click(object sender, EventArgs e)
+        {
+            if (cbx_profe.SelectedItem == null)
+            {
+                Buscar_asignatura();
+            }else if (cbx_mes.SelectedItem == null)
+            {
+                Buscar_profe();
+            }
+
+            cbx_profe.Text = "";
+            cbx_mes.Text = "";
+
+        }
+
+        private void volver_Click(object sender, EventArgs e)
         {
             Listar_asignaturas();
         }
