@@ -21,7 +21,7 @@ namespace uprofe
             this.Server = "localhost";
             this.Port = "3306";
             this.User = "root";
-            this.Password = "";
+            this.Password = "loky";
         }
 
         public MySqlConnection CrearConexion()

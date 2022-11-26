@@ -40,6 +40,8 @@
             this.nombre_asignatura = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guardar_asignatura = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // profesor_asignado
@@ -156,11 +158,22 @@
             this.guardar_asignatura.UseVisualStyleBackColor = false;
             this.guardar_asignatura.Click += new System.EventHandler(this.guardar_asignatura_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::uprofe.Properties.Resources.logo2;
+            this.pictureBox1.Location = new System.Drawing.Point(497, 253);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(270, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 30;
+            this.pictureBox1.TabStop = false;
+            // 
             // Registro_Asignatura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(791, 380);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.guardar_asignatura);
             this.Controls.Add(this.profesor_asignado);
             this.Controls.Add(this.label6);
@@ -175,6 +188,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Registro_Asignatura";
             this.Text = "Registro_Asignatura";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,5 +208,6 @@
         private System.Windows.Forms.TextBox nombre_asignatura;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button guardar_asignatura;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

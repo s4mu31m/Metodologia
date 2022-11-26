@@ -19,7 +19,22 @@ namespace uprofe
             InitializeComponent();
         }
 
+        private void Formato_al()
+        {
 
+            dgv_reporte.Columns[0].Visible = false;
+            
+            dgv_reporte.Columns[1].Width = 250;
+            dgv_reporte.Columns[1].HeaderText = "ASIGNATURA";
+            dgv_reporte.Columns[2].Width = 200;
+            dgv_reporte.Columns[2].HeaderText = "HORAS ASIGNATURA";
+            dgv_reporte.Columns[3].Width = 100;
+            dgv_reporte.Columns[3].HeaderText = "VALOR HORA";
+            dgv_reporte.Columns[4].Width = 150;
+            dgv_reporte.Columns[4].HeaderText = "MES IMPARTIDO";
+            dgv_reporte.Columns[5].Width = 150;
+            dgv_reporte.Columns[5].HeaderText = "PROFESOR ASIGNADO";
+        }
 
 
 
@@ -52,6 +67,7 @@ namespace uprofe
                 DataTable tabla = new DataTable();
                 adaptar.Fill(tabla);
                 dgv_reporte.DataSource = tabla;
+                this.Formato_al();
 
             }
             catch (Exception b)
@@ -62,5 +78,7 @@ namespace uprofe
 
             conexionBD.Close();
         }
+
+    
     }
 }
