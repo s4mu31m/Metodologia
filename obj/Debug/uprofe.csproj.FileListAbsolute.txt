@@ -1,0 +1,71 @@
+C:\Users\erik_\source\repos\uprofe\bin\Debug\uprofe.exe.config
+C:\Users\erik_\source\repos\uprofe\bin\Debug\uprofe.exe
+C:\Users\erik_\source\repos\uprofe\bin\Debug\uprofe.pdb
+C:\Users\erik_\source\repos\uprofe\obj\Debug\uprofe.csproj.AssemblyReference.cache
+C:\Users\erik_\source\repos\uprofe\obj\Debug\uprofe.csproj.SuggestedBindingRedirects.cache
+C:\Users\erik_\source\repos\uprofe\obj\Debug\uprofe.Login.resources
+C:\Users\erik_\source\repos\uprofe\obj\Debug\uprofe.Properties.Resources.resources
+C:\Users\erik_\source\repos\uprofe\obj\Debug\uprofe.csproj.GenerateResource.cache
+C:\Users\erik_\source\repos\uprofe\obj\Debug\uprofe.csproj.CoreCompileInputs.cache
+C:\Users\erik_\source\repos\uprofe\obj\Debug\uprofe.exe
+C:\Users\erik_\source\repos\uprofe\obj\Debug\uprofe.pdb
+C:\Users\samum\source\repos\Metodologia\obj\Debug\uprofe.csproj.AssemblyReference.cache
+C:\Users\samum\source\repos\Metodologia\obj\Debug\uprofe.csproj.SuggestedBindingRedirects.cache
+C:\Users\samum\source\repos\Metodologia\obj\Debug\uprofe.exe.config
+C:\Users\samum\source\repos\Metodologia\obj\Debug\uprofe.Ingreso.resources
+C:\Users\samum\source\repos\Metodologia\obj\Debug\uprofe.Ingreso_docente.resources
+C:\Users\samum\source\repos\Metodologia\obj\Debug\uprofe.Login.resources
+C:\Users\samum\source\repos\Metodologia\obj\Debug\uprofe.Properties.Resources.resources
+C:\Users\samum\source\repos\Metodologia\obj\Debug\uprofe.Registro_Asignatura.resources
+C:\Users\samum\source\repos\Metodologia\obj\Debug\uprofe.csproj.GenerateResource.cache
+C:\Users\samum\source\repos\Metodologia\obj\Debug\uprofe.csproj.CoreCompileInputs.cache
+C:\Users\samum\source\repos\Metodologia\obj\Debug\uprofe.exe
+C:\Users\samum\source\repos\Metodologia\obj\Debug\uprofe.pdb
+C:\Users\samum\source\repos\Metodologia\bin\Debug\uprofe.exe.config
+C:\Users\samum\source\repos\Metodologia\bin\Debug\uprofe.exe
+C:\Users\samum\source\repos\Metodologia\bin\Debug\uprofe.pdb
+C:\Users\samum\source\repos\Metodologia\bin\Debug\MySql.Data.dll
+C:\Users\samum\source\repos\Metodologia\bin\Debug\MySql.Data.EntityFramework.dll
+C:\Users\samum\source\repos\Metodologia\bin\Debug\MySql.Web.dll
+C:\Users\samum\source\repos\Metodologia\bin\Debug\Google.Protobuf.dll
+C:\Users\samum\source\repos\Metodologia\bin\Debug\ZstdNet.dll
+C:\Users\samum\source\repos\Metodologia\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\samum\source\repos\Metodologia\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\samum\source\repos\Metodologia\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\samum\source\repos\Metodologia\bin\Debug\System.Buffers.dll
+C:\Users\samum\source\repos\Metodologia\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\samum\source\repos\Metodologia\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\samum\source\repos\Metodologia\bin\Debug\MySql.Data.xml
+C:\Users\samum\source\repos\Metodologia\bin\Debug\MySql.Data.EntityFramework.xml
+C:\Users\samum\source\repos\Metodologia\bin\Debug\MySql.Web.xml
+C:\Users\samum\source\repos\Metodologia\obj\Debug\uprofe.csproj.CopyComplete
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\bin\Debug\uprofe.exe.config
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\bin\Debug\uprofe.exe
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\bin\Debug\uprofe.pdb
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\bin\Debug\MySql.Data.dll
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\bin\Debug\MySql.Data.EntityFramework.dll
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\bin\Debug\MySql.Web.dll
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\bin\Debug\Google.Protobuf.dll
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\bin\Debug\ZstdNet.dll
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\bin\Debug\System.Buffers.dll
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\bin\Debug\MySql.Data.xml
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\bin\Debug\MySql.Data.EntityFramework.xml
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\bin\Debug\MySql.Web.xml
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\obj\Debug\uprofe.csproj.AssemblyReference.cache
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\obj\Debug\uprofe.csproj.SuggestedBindingRedirects.cache
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\obj\Debug\uprofe.exe.config
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\obj\Debug\uprofe.Ingreso.resources
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\obj\Debug\uprofe.Ingreso_docente.resources
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\obj\Debug\uprofe.Login.resources
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\obj\Debug\uprofe.Properties.Resources.resources
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\obj\Debug\uprofe.Registro_Asignatura.resources
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\obj\Debug\uprofe.csproj.GenerateResource.cache
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\obj\Debug\uprofe.csproj.CoreCompileInputs.cache
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\obj\Debug\uprofe.csproj.CopyComplete
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\obj\Debug\uprofe.exe
+C:\Users\erik_\source\repos\uprofe 3\Metodologia-DEVELOP\obj\Debug\uprofe.pdb
